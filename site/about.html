@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О проекте — Файло обменник</title>
+<meta name="description" content="Что такое Файло обменник, как он работает и какие возможности предлагает.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-mark">🔄</span> Файло обменник</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" data-nav="home">Главная</a>
+      <a href="about.html" data-nav="about" class="active">О проекте</a>
+      <a href="download.html" data-nav="download" class="nav-cta">Скачать</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero" style="padding-bottom:16px">
+    <span class="hero-badge">О проекте</span>
+    <h1>Простой обмен файлами, <span class="accent">который не лезет в облако</span></h1>
+    <p class="lead">Файло обменник создан, чтобы переносить файлы между телефоном и компьютером быстро и без лишних действий.</p>
+  </section>
+
+  <section class="section" style="padding-top:8px">
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>Простота</h3>
+        <p>Никаких аккаунтов и настроек. Выбрали файл — показали QR — всё передано.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🚫</div>
+        <h3>Без облака</h3>
+        <p>Файлы не копируются на сторонние серверы: передача идёт между вашими устройствами в одной сети.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📱💻</div>
+        <h3>Две платформы</h3>
+        <p>Одно приложение на Android и Windows — обмен работает в обе стороны между ними.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Возможности</h2>
+    </div>
+    <ul class="features" style="max-width:760px;margin:0 auto">
+      <li><span class="dot">✓</span><div><b>Передача по QR-коду</b><span>получатель сканирует код камерой — файл уходит в его браузер.</span></div></li>
+      <li><span class="dot">✓</span><div><b>Цифровой код</b><span>без камеры: введите короткий код и примите файл.</span></div></li>
+      <li><span class="dot">✓</span><div><b>Любые файлы</b><span>документы, фото, видео, архивы.</span></div></li>
+      <li><span class="dot">✓</span><div><b>Минималистичный интерфейс</b><span>все важные действия в пару касаний.</span></div></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 Файло обменник</span>
+    <div class="footer-links">
+      <a href="index.html">Главная</a>
+      <a href="download.html">Скачать</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var t = document.getElementById('nav-toggle');
+  var l = document.getElementById('nav-links');
+  if (t) { t.addEventListener('click', function(){
+    var open = l.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }); }
+</script>
+</body>
+</html>

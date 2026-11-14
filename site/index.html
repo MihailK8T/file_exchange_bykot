@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Файло обменник — быстрый обмен файлами между устройствами</title>
+<meta name="description" content="Простое и быстрое приложение для обмена файлами между телефоном и компьютером через QR-код или цифровой код.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-mark">🔄</span> Файло обменник</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" data-nav="home" class="active">Главная</a>
+      <a href="about.html" data-nav="about">О проекте</a>
+      <a href="download.html" data-nav="download" class="nav-cta">Скачать</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="hero-badge">⚡ Быстро · просто · без облака</span>
+      <h1>Передавайте файлы <span class="accent">без лишних шагов</span></h1>
+      <p class="lead">Файло обменник — приложение для передачи файлов между телефоном и компьютером.
+        Отправляйте документы, фото и видео по QR-коду или цифровому коду прямо в своей Wi-Fi сети.</p>
+      <div class="actions">
+        <a href="download.html" class="btn btn-primary btn-lg">Скачать приложение ↓</a>
+        <a href="about.html" class="btn btn-ghost btn-lg">Как это работает</a>
+      </div>
+      <div class="hero-note">Доступно для Android и Windows</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Почему Файло обменник</h2>
+        <p>Никаких регистраций, токенов и загрузок в облако. Файлы летят напрямую между вашими устройствами.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon">📡</div>
+          <h3>Передача через QR</h3>
+          <p>Отсканируйте код — и файлы сразу отправятся. Удобно для телефон ↔ компьютер.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔢</div>
+          <h3>Или по цифровому коду</h3>
+          <p>Нет камеры под рукой? Введите короткий цифровой код и получите файлы.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔒</div>
+          <h3>Данные при вас</h3>
+          <p>Передача идёт в вашей сети без сторонних серверов. Вы контролируете, что и куда уходит.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Как отправить файл</h2>
+      </div>
+      <ul class="features" style="max-width:760px;margin:0 auto">
+        <li><span class="dot">1</span><div><b>Выберите файл</b><span>Откройте приложение и нажмите «Отправить».</span></div></li>
+        <li><span class="dot">2</span><div><b>Способ передачи</b><span>Покажите QR-код или продиктуйте цифровой код.</span></div></li>
+        <li><span class="dot">3</span><div><b>Примите файл</b><span>Получатель сканирует или вводит код — файл загружается в браузер.</span></div></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 Файло обменник</span>
+    <div class="footer-links">
+      <a href="about.html">О проекте</a>
+      <a href="download.html">Скачать</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var t = document.getElementById('nav-toggle');
+  var l = document.getElementById('nav-links');
+  if (t) { t.addEventListener('click', function(){
+    var open = l.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }); }
+</script>
+</body>
+</html>

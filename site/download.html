@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Скачать — Файло обменник</title>
+<meta name="description" content="Скачайте приложение Файло обменник для Android (APK) или Windows (EXE).">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="brand-mark">🔄</span> Файло обменник</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" data-nav="home">Главная</a>
+      <a href="about.html" data-nav="about">О проекте</a>
+      <a href="download.html" data-nav="download" class="active nav-cta">Скачать</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="download-hero">
+    <h1>Скачать приложение</h1>
+    <p>Выберите свою платформу. Сборки занимают мало места и устанавливаются в пару кликов.</p>
+  </section>
+
+  <div class="platforms">
+    <div class="platform">
+      <div class="os-icon android">🤖</div>
+      <h3>Android</h3>
+      <div class="os-sub">Приложение для смартфона · APK</div>
+      <div class="dl"><button class="btn btn-primary" type="button" data-soon>⬇ Скачать APK</button></div>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:12px">Установка: разрешите «установку из неизвестных источников».</p>
+    </div>
+    <div class="platform">
+      <div class="os-icon windows">🖥️</div>
+      <h3>Windows</h3>
+      <div class="os-sub">Настольное приложение · EXE</div>
+      <div class="dl"><button class="btn btn-primary" type="button" data-soon>⬇ Скачать EXE</button></div>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:12px">Работает на Windows 10 и 11.</p>
+    </div>
+  </div>
+
+  <div class="available-note" id="soon-note" style="display:none">
+    <strong>⏳ Скоро.</strong> Сборки появятся здесь, как только выйдет стабильная версия для вашей платформы.
+  </div>
+
+  <section class="steps">
+    <h2 style="font-size:24px;margin-bottom:16px">Установка</h2>
+    <ol>
+      <li><b>Скачайте файл</b> нужной версии для вашего устройства.</li>
+      <li><b>Android:</b> откройте APK и разрешите установку из неизвестных источников, если система спросит.</li>
+      <li><b>Windows:</b> запустите EXE и следуйте шагам установщика.</li>
+      <li>Откройте приложение и начните обмен файлами по QR или коду.</li>
+    </ol>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 Файло обменник</span>
+    <div class="footer-links">
+      <a href="about.html">О проекте</a>
+      <a href="index.html">Главная</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var t = document.getElementById('nav-toggle');
+  var l = document.getElementById('nav-links');
+  if (t) { t.addEventListener('click', function(){
+    var open = l.classList.toggle('open');
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }); }
+  var soonBtns = document.querySelectorAll('[data-soon]');
+  var soonNote = document.getElementById('soon-note');
+  soonBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      if (soonNote) { soonNote.style.display = 'block'; soonNote.scrollIntoView({behavior:'smooth', block:'center'}); }
+    });
+  });
+</script>
+</body>
+</html>
